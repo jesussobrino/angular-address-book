@@ -1,0 +1,55 @@
+<form name="userForm" novalidate>
+    <fieldset class="form-group" ng-class="{'has-error':!userForm.userName.$valid && userForm.$submitted}">
+        <label for="userName" class="control-label">Name: </label>
+        <input type="text" class="form-control" ng-model="userModel.name" id="userName" name="userName"
+               required="required" placeholder="Name" autofocus/>
+        <div class="help-block" ng-show="userForm.$submitted">
+            <div ng-show="userForm.userName.$error.required">Please, fill your name.</div>
+        </div>
+    </fieldset>
+
+    <fieldset class="form-group" ng-class="{'has-error':!userForm.userSurname.$valid && userForm.$submitted}">
+        <label for="userSurname" class="control-label">Last Name: </label>
+        <input type="text" class="form-control" ng-model="userModel.surname" id="userSurname" name="userSurname"
+               required="required" placeholder="Last Name"/>
+        <div class="help-block" ng-show="userForm.$submitted">
+            <div ng-show="userForm.userSurname.$error.required">Please, fill your last name.</div>
+        </div>
+    </fieldset>
+
+    <fieldset class="form-group" ng-class="{'has-error':!userForm.userEmail.$valid && userForm.$submitted}">
+        <label for="userSurname" class="control-label">Email: </label>
+        <input type="email" class="form-control" ng-model="userModel.email" id="userEmail" name="userEmail"
+               required="required" placeholder="E-mail"/>
+        <div class="help-block" ng-show="userForm.$submitted">
+            <span ng-show="userForm.userEmail.$error.required">Please, fill your email.</span>
+            <span ng-show="userForm.userEmail.$error.email">This is not a valid email.</span>
+        </div>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="userAddress">Address: </label>
+        <input type="text" class="form-control" ng-model="userModel.address" id="userAddress" name="userAddress" placeholder="Address"/>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="userCity">City: </label>
+        <input type="text" class="form-control" ng-model="userModel.city" id="userCity" placeholder="City"/>
+    </fieldset>
+
+    <fieldset class="form-group" ng-class="{'has-error':!userForm.userZipCode.$valid && userForm.$submitted}">
+        <label for="userZipCode">Zip-code: </label>
+        <input type="text" class="form-control" ng-model="userModel.zipCode" id="userZipCode" name="userZipCode" placeholder="Zip-code"
+               ng-pattern="/^\d{5}$/"/>
+        <div class="help-block" ng-show="userForm.$submitted">
+            <div ng-show="!userForm.userZipCode.$valid">Please, fill this input with a valid zip code (5 digits).</div>
+        </div>
+    </fieldset>
+
+    <fieldset class="form-group">
+        <label for="userCountry">Country: </label>
+        <input type="text" class="form-control" ng-model="userModel.country" id="userCountry" placeholder="Country"/>
+    </fieldset>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>

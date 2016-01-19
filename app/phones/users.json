@@ -1,0 +1,38 @@
+[
+    {
+        "id": "userId1", 
+        "imageUrl": "img/users/default_user.png", 
+        "name": "Jesús",
+        "surname": "Sobrino",
+        "email": "jesusyyo@gmail.com",
+        "phone" : "666666666",
+        "address":"Malagon Real Street",
+        "city": "Malagón",
+        "zipCode":"13420",
+        "country": "Spain"
+    }, 
+    {
+        "id": "userId2", 
+        "imageUrl": "img/users/default_user.png", 
+        "name": "John",
+        "surname": "Carter",
+        "email": "jhon@carter.com",
+        "phone" : "666666666",
+        "address":"Ciudad Real Street",
+        "city": "Ciudad Real",
+        "zipCode":"13002",
+        "country": "Spain"
+    }, 
+    {
+        "id": "userId3", 
+        "imageUrl": "img/users/default_user.png", 
+        "name": "Vincent",
+        "surname": "Vega",
+        "email": "Vincent@vega.com",
+        "phone" : "666666666",
+        "address":"Hollywood Street",
+        "city": "CA",
+        "zipCode":"13420",
+        "country": "USA"
+    }
+]
